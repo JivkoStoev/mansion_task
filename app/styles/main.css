@@ -10,8 +10,80 @@ body {
   background-size: cover;
   background-color: #862222;
 }
-#main-page #girl-img {
+#main-page .checkbox a {
+  color: #000;
+}
+#main-page #reg-form .checkbox {
+  margin-top: 30px;
+}
+#main-page .btn-green,
+#main-page .btn-red {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  max-width: 300px;
+  width: 100%;
+  display: block;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
   margin: 0 auto;
+  margin-top: 10px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+#main-page .btn-green:focus,
+#main-page .btn-red:focus {
+  outline: 0;
+}
+#main-page .btn-green:hover,
+#main-page .btn-red:hover {
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
+}
+#main-page .btn-green {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dd53a+0,a1d54f+50,80c217+51,7cbc0a+100;Green+Gloss+%231 */
+  background: #9dd53a;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dd53a', endColorstr='#7cbc0a', GradientType=0);
+  /* IE6-9 */
+  border: 1px solid seagreen;
+}
+#main-page .btn-red {
+  border: 1px solid #961212;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a02613+0,aa1414+50,961212+51,b23215+100 */
+  background: #a02613;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #a02613 0%, #aa1414 50%, #961212 51%, #b23215 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #a02613 0%, #aa1414 50%, #961212 51%, #b23215 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #a02613 0%, #aa1414 50%, #961212 51%, #b23215 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a02613', endColorstr='#b23215', GradientType=0);
+  /* IE6-9 */
+}
+#main-page form {
+  padding-bottom: 20px;
 }
 #main-page .h1 {
   font-size: 36px;
@@ -25,10 +97,29 @@ body {
   display: block;
   font-weight: bolder;
 }
-#main-page #step_3 #bonus-code {
+#main-page #agree-error.error {
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+#main-page #user-info-form {
   display: none;
 }
-#main-page #reg-form {
+#main-page #user-info-form label,
+#main-page #user-info-form select {
+  width: 100%;
+}
+#main-page #user-info-form label {
+  font-weight: normal;
+  font-size: 16px;
+}
+#main-page #user-info-form .checkbox {
+  margin-left: 20px;
+}
+#main-page #user-info-form #bonus-code {
+  display: none;
+}
+#main-page #forms-container {
   border: none;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -41,12 +132,12 @@ body {
   -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
 }
-#main-page #reg-form .title {
+#main-page .title {
   text-align: center;
   font-weight: bold;
   font-size: 26px;
 }
-#main-page #reg-form .title .bonus {
+#main-page .title .bonus {
   color: #fff;
   font-size: 36px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
@@ -62,8 +153,29 @@ input.error {
   -moz-box-shadow: 0px 0px 40px 0px red;
   box-shadow: 0px 0px 40px 0px red;
 }
+.modal-content {
+  font-weight: bold;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ad2914+0,ce2718+100 */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWtKRQoRrh/AAAAAXRSTlPlkIbOkQAAAApJREFUeJxjYgAAAAYAAzY3fKgAAAAASUVORK5CYII=');
+  -webkit-box-shadow: inset 0px 0px 10px 0px #000000;
+  -moz-box-shadow: inset 0px 0px 10px 0px #000000;
+  box-shadow: inset 0px 0px 10px 0px #000000;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+}
 @media (min-width: 768px) {
   #main-page {
-    padding-top: 100px;
+    padding-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+  #main-page .title {
+    line-height: 31px;
+    padding-top: 10px;
+  }
+  #main-page .title .bonus {
+    display: block;
   }
 }
