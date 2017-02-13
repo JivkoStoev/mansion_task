@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- build:css style.css -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/bootstrap-theme.min.css">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -28,39 +29,42 @@
     <section class="container">
         <div class="col-xs-12 col-sm-6">
             <h1 class="h1">Win Free <span>100$</span> Bonus Money</h1>
+            <img id="girl-img" class="img-responsive" src="images/live-roulette.png" alt="live roulette" title="live roulette" />
         </div>
         <div class="col-xs-12 col-sm-6">
-            <form id="reg-form" class="col-xs-12">
-                <p class="title">Register here for Bonus Money</p>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
+            <form id="reg-form" class="well col-xs-12">
+                <p class="title">Register here for <span class="bonus">Bonus</span> Money</p>
                 <div class="form-group">
                     <input type="text" class="form-control" id="inputFirstName" name="inputFirstName" placeholder="First Name">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="inputUserName" placeholder="User Name">
+                    <input type="text" class="form-control" id="inputUserName" name="inputUserName" placeholder="User Name">
                 </div>
+                
                 <div class="form-group">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email">
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password">
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox"> By checking this box, I agree to <a href="#">Terms &amp; Conditions</a> of the site.
+                        <input type="checkbox" name="agree" value="agree"> By checking this box, I agree to <a href="#">Terms &amp; Conditions</a> of the site.
                     </label>
                 </div>
 
-                <input type="submit" value="submit" />>
+                <span id="step_one_btn">Continue</span>
 
-                <!--<div id="step_3">
+                <div id="step_3">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="inputAddress1" placeholder="Address 1">
+                        <input type="text" class="form-control" id="inputAddress1" name="inputAddress1" placeholder="Address 1">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Address 2">
+                        <input type="text" class="form-control" id="inputAddress2" name="inputAddress2" placeholder="Address 2">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="inputCity" placeholder="City">
+                        <input type="text" class="form-control" id="inputCity" name="inputCity" placeholder="City">
                     </div>
                     <div class="form-group">
                         <label for="inputCountry">Country</label>
@@ -317,62 +321,72 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="inputPostalCode" placeholder="Postal Code">
+                        <input type="text" class="form-control" id="inputPostalCode" name="inputPostalCode" placeholder="Postal Code">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                        <input type="text" class="form-control" id="inputPhone" name="inputPhone" placeholder="Phone">
                     </div>
                     <div class="checkbox">
                         <p>
-                            <input id="bonus-code-checkbox" type="checkbox"> Do you have a bonus code? Click here.
+                            <input id="bonus-code-checkbox" name="bonus-code-checkbox" type="checkbox"> Do you have a bonus code? Click here.
                         </p>
 
                     </div>
                     <div id="bonus-code" class="form-group">
-                        <input type="text" class="form-control" id="inputBonusCode" placeholder="Bonus Code">
+                        <input type="text" class="form-control" id="inputBonusCode" name="inputBonusCode" placeholder="Bonus Code">
                     </div>
 
-                </div>-->
+                    <span id="step_3_btn">Continue</span>
+
+                </div>
 
 
             </form>
         </div>
 
 
-        <div id="step_2">
-            <p>You’re ready to play! In order to play with real money, you will need to provide more information. You can do so now if you wish, or skip and do it at a later time.</p>
-            <button class="btn" onclick="showStep3()" type="submit">Continue Registration</button>
-            <a href="http://www.casino.com/" role="button" class="btn" type="submit">Skip</a>
-        </div>
-        <div id="step_4">
-            <p>Thank you You can now play with real money. Have fun, and good luck!</p>
-            <a href="http://www.casino.com/casino-games/" role="button" class="btn" type="submit">Play Now</a>
-            <a href="http://www.casino.com/promotions/" role="button" class="btn" type="submit">Promotions</a>
-        </div>
+        
+        
 
-        <!-- Button trigger modal -->
-        <!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-        Launch demo modal
-        </button>-->
-
-        <!-- Modal -->
-        <!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="modalStep2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                     </div>
                     <div class="modal-body">
-                        ...
+                         <div id="step_2">
+                            <p>You’re ready to play! In order to play with real money, you will need to provide more information. You can do so now if you wish, or skip and do it at a later time.</p>
+                          
+                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                          <button class="btn" id="show_step_3" type="submit">Continue Registration</button>
+                            <a href="http://www.casino.com/" role="button" class="btn" type="submit">Skip</a>
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
+
+        
+        <div class="modal fade" id="modalStep4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                         <div id="step_4">
+                            <p>Thank you You can now play with real money. Have fun, and good luck!</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="http://www.casino.com/casino-games/" role="button" class="btn" type="submit">Play Now</a>
+                        <a href="http://www.casino.com/promotions/" role="button" class="btn" type="submit">Promotions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </section>
@@ -382,8 +396,8 @@
     <!-- endbuild -->
     <script src="scripts/bootstrap.min.js"></script>
 
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
-
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/additional-methods.min.js"></script>
 </body>
 
 </html>

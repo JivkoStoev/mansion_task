@@ -1,3 +1,7 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #e5e5e5;
+}
 #main-page {
   background: url(../images/bg1.png) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -6,28 +10,57 @@
   background-size: cover;
   background-color: #862222;
 }
+#main-page #girl-img {
+  margin: 0 auto;
+}
 #main-page .h1 {
   font-size: 36px;
   text-align: center;
-  color: #fff;
+  text-shadow: 0 8px 4px rgba(0, 0, 0, 0.25);
   font-weight: bold;
-  text-transform: uppercase;
 }
 #main-page .h1 span {
   color: #afae60;
-  font-size: 70px;
+  font-size: 90px;
   display: block;
   font-weight: bolder;
-}
-#main-page #step_3 {
-  display: none;
 }
 #main-page #step_3 #bonus-code {
   display: none;
 }
+#main-page #reg-form {
+  border: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #972626;
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+}
 #main-page #reg-form .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 26px;
+}
+#main-page #reg-form .title .bonus {
   color: #fff;
-  font-size: 20px;
+  font-size: 36px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+label.error {
+  color: red;
+  font-weight: normal;
+  padding: 5px 0;
+  text-shadow: 1px 1px 1px darkred;
+}
+input.error {
+  -webkit-box-shadow: 0px 0px 40px 0px red;
+  -moz-box-shadow: 0px 0px 40px 0px red;
+  box-shadow: 0px 0px 40px 0px red;
 }
 @media (min-width: 768px) {
   #main-page {
