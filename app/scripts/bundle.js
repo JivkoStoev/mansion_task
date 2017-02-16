@@ -75,7 +75,8 @@ $(document).ready(function() {
             inputPassword: {
                 required: true,
                 minlength: 6,
-                maxlength: 12
+                maxlength: 12,
+                alphanumeric: true
             },
             agree: "required"
         }
